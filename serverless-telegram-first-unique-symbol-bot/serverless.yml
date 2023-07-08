@@ -1,0 +1,22 @@
+frameworkVersion: '3'
+
+service: telegram-first-unique-symbol-bot
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  environment:
+    TELEGRAM_TOKEN: ${env:TELEGRAM_TOKEN}
+
+functions:
+  processWebhook:
+    handler: handler.processWebhook
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
+          

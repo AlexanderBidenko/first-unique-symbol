@@ -1,0 +1,20 @@
+{
+  "name": "serverless-telegram-first-unique-symbol-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot using AWS API Gateway and AWS Lambda",
+  "main": "handler.js",
+  "scripts": {
+    "local": "sls offline start",
+    "deploy": "sls deploy",
+    "logs": "sls logs --function processWebhook -t"
+  },
+  "keywords": [],
+  "author": "AlexBidenko",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "3"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
